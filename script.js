@@ -93,11 +93,18 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
 });
 
 
-userNamePrompt = window.prompt('Hello, what is your name?');
+//userNamePrompt = window.prompt('Hello, what is your name?');
 
-if(typeof userNamePrompt === 'string' && userNamePrompt !== ''){
+var i = 0;
+
+while (i < speechesArray.length) {
+  console.log("This speech is written by " + speechesArray[i].author);
+  i++;
+}
+
+/*if(typeof userNamePrompt === 'string' && userNamePrompt !== ''){
   console.log('Hi ' + userNamePrompt + '!');
 }else{
   console.log('Ok, I\'ll just call you User.');
   userNamePrompt = 'User';
-}
+}*/
