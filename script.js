@@ -25,7 +25,16 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   favoriteSpeechPrompt = window.prompt('Which speech author is your favorite?');
 
-  switch(favoriteSpeechPrompt){
+  for(var i = 0; i < speechesArray.length; i++) {
+
+      if(favoriteSpeechPrompt === speechesArray[i].author) {
+
+        console.log(speechesArray[i].author + " was " + speechesArray[i].authorAge + " during this speech.")
+      }
+    }
+  });
+
+  /*switch(favoriteSpeechPrompt){
     case 'Churchill':
       console.log(speechesArray[0].author + ' was ' + speechesArray[0].authorAge + ' during this speech.');
       break;
@@ -38,8 +47,7 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
     default:
       console.log('Did you spell that name correctly?');
       break;
-  }
-});
+  }*/
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
